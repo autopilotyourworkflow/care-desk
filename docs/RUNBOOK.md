@@ -52,7 +52,7 @@ A VIP link is a private link for someone who needs more tries, such as a team le
    npx wrangler secret put VIP_TOKENS
    ```
 
-3. Send the link: `https://caredesk.autopilotyourworkflow.com/try/?k=CODE`
+3. Send the link: `https://caredesk.autopilotyourworkflow.com/?k=CODE` (any page works; the code is kept for that browser tab)
 
 The page takes the code out of the address bar and keeps it for that browser tab only.
 

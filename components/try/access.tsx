@@ -6,7 +6,7 @@ import { forwardRef, useEffect, useImperativeHandle, useRef, useSyncExternalStor
 /**
  * Private (VIP) links and the optional bot check for the live box.
  *
- * A private link is /try/?k=<token>. The token is kept in sessionStorage for this tab (so it survives a reload and
+ * A private link is any page with ?k=<token> (the root layout reads it). The token is kept in sessionStorage for this tab (so it survives a reload and
  * moving around the site), removed from the address bar, and sent to the Worker as the X-Care-Desk-Key header.
  * Turnstile only exists when NEXT_PUBLIC_TURNSTILE_SITE_KEY is set at build time, and private links skip it.
  */

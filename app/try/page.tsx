@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  // No page-level Suspense: TryPage reads ?k= (useSearchParams) only inside its own small <Suspense> around
-  // <VipKeyFromUrl />, so the shell, header and message box all prerender. A boundary here would make the static
+  // No page-level Suspense: ?k= is read (useSearchParams) only by <VipKeyFromUrl /> in the root layout, inside its own
+  // small <Suspense>, so the shell, header and message box all prerender. A boundary here would make the static
   // export ship a fallback plus a hidden copy of the page, swapped in by script: heavier, and the real page stays hidden until scripts run.
   return <TryPage />;
 }

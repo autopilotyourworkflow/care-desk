@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useCallback, useEffect, useMemo, useRef, useState, type FormEvent, type KeyboardEvent, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type FormEvent, type KeyboardEvent, type ReactNode } from "react";
 import { ArrowRight, Info, KeyRound, Lock, MessageCircle, Play, RotateCcw, Stethoscope } from "lucide-react";
 import type { PipelineResult, StepId } from "@/lib/types";
 import type { Persona } from "@/lib/client/types";
@@ -16,7 +16,7 @@ import { examplesFor, exampleForText, idiomNote, shortName } from "./examples";
 import { MAX_CHARS, charCount, normaliseText, preloadBrowserPipeline, usedAnyModel, usedSampleModels, type Fallback } from "./live";
 import { useLiveRun, type RunState } from "./useLiveRun";
 import { FAILED_BODY, FAILED_TITLE, fallbackCopy, isStoppedByRules, runAnnouncement } from "./announce";
-import { TurnstileBox, TURNSTILE_SITE_KEY, useVipKey, VipKeyFromUrl, type TurnstileHandle } from "./access";
+import { TurnstileBox, TURNSTILE_SITE_KEY, useVipKey, type TurnstileHandle } from "./access";
 
 const TRY_SHORTCUTS: ShortcutGroup[] = [
   { title: "Try a message", items: [{ keys: ["Ctrl", "Enter"], label: "Run the checks (Cmd on a Mac)" }] },
@@ -120,10 +120,6 @@ export function TryPage() {
 
   return (
     <AppShell shortcuts={TRY_SHORTCUTS}>
-      {/* Only this empty reader waits for the browser's address bar, so the page itself prerenders. */}
-      <Suspense fallback={null}>
-        <VipKeyFromUrl />
-      </Suspense>
       <PageHeader
         title="Try a message"
         description="Write as one of three fictional patients and watch each check run live."

@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import { Suspense } from "react";
+import { VipKeyFromUrl } from "@/components/try/access";
 import { SessionProvider } from "@/lib/client/session";
 import "./globals.css";
 
@@ -86,6 +88,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en-AU" className={`${poppins.variable} ${clash.variable}`}>
       <body className="min-h-dvh bg-canvas font-sans text-ink antialiased">
         <div hidden aria-hidden="true" dangerouslySetInnerHTML={{ __html: CONTRACT_COMMENT }} />
+        {/* A private link (?k=) works on any page: the reader stores it for the tab, so the home page link on a CV opens
+            the live box with that link's budget. Only this empty component waits for the address bar; pages prerender. */}
+        <Suspense fallback={null}>
+          <VipKeyFromUrl />
+        </Suspense>
         <SessionProvider>{children}</SessionProvider>
         {CF_BEACON && (
           // The official snippet, as Cloudflare gives it: deferred, no cookies.
