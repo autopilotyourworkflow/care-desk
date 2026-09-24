@@ -41,6 +41,11 @@ export interface TourStop {
    * the copy talks about.
    */
   park?: string;
+  /**
+   * How long the page takes to reveal what this stop points at (the desk fades the message in and slides the details
+   * in, one part at a time). The card and its spotlight wait this long, so they never chase a moving target.
+   */
+  settleMs?: number;
   /** Anchors the stop's copy points at, which the card steps off when there is room (it never covers `anchor`). */
   keepClear?: readonly string[];
   /**
@@ -73,6 +78,7 @@ export const TOUR_STOPS: TourStop[] = [
     message: "routine",
     anchor: "desk-reply",
     fallback: ["desk-draft"],
+    settleMs: 1100,
     title: () => "The AI drafts, a person sends",
     body: (c) =>
       `${asked(c)} Care Desk drafted this reply from the patient's own records. Nothing goes out until someone presses Send.`,
@@ -83,6 +89,7 @@ export const TOUR_STOPS: TourStop[] = [
     path: "/desk/",
     message: "routine",
     anchor: "desk-trail",
+    settleMs: 1000,
     title: () => "Checked before anyone sees it",
     body: () =>
       "Every message runs through the same seven checks. The safety rules go first, before any AI, and every number in the draft is matched to the records.",
@@ -94,6 +101,7 @@ export const TOUR_STOPS: TourStop[] = [
     message: "safety",
     anchor: "desk-conversation",
     fallback: ["desk-reply"],
+    settleMs: 1100,
     title: () => "Anything medical goes to a clinician",
     body: (c) => {
       const name = c.safety?.firstName ?? "This patient";

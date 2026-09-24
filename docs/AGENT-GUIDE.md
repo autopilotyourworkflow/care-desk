@@ -4,7 +4,7 @@ One page for anyone working the Care Desk queue. Plain words, no training needed
 
 ## The one habit
 
-**Read, then send.** Care Desk drafts the routine replies. Pick a message from the queue and it opens with the draft under it. You read the draft, check it against the patient's records (**Show details**, beside the message title, opens the check trail and the patient's plan and order), and you decide. Nothing goes to a patient until you press Send.
+**Read, then send.** Care Desk drafts the routine replies. Pick a message from the queue and it opens with the draft under it. You read the draft, check it against the patient's records (the details open with the message: the check trail and the patient's plan and order), and you decide. Nothing goes to a patient until you press Send.
 
 ## Your queue
 
@@ -22,7 +22,7 @@ The filters above the queue group the rows: **Write the reply**, **Ready to send
 
 ## Working a message
 
-1. **Open it.** The patient's message sits at the top, with the reply straight under it. **Show details**, beside the message title, opens the check trail and the patient's plan and order: beside them on a wide screen, under the reply on a smaller one. **Show steps** lays the checks out; **More about** opens the rest of the patient's record.
+1. **Open it.** The patient's message sits at the top, with the reply straight under it. The details open with it: the check trail and the patient's plan and order, beside them on a wide screen and under the reply on a smaller one (**Hide details**, beside the message title, puts them away for that message). **Show steps** lays the checks out; **More about** opens the rest of the patient's record.
 2. **Read the draft.** Every fact in it has a number, like [1], pointing to the order, charge or policy it came from. The fact check has already matched every date, amount and order number to those sources. A detail marked **check first** comes from the patient's own message, not the records: check it before you send.
 3. **Decide.**
    - **Send** when it is right. You can undo straight after.

@@ -63,6 +63,8 @@ const GRID_BASE = "lg:grid-rows-[minmax(0,1fr)] lg:grid-cols-[18.5rem_minmax(0,1
 const GRID_CLOSED = "xl:grid-cols-[20rem_minmax(0,1fr)_0rem] 2xl:grid-cols-[22rem_minmax(0,1fr)_0rem]";
 const GRID_OPEN = "xl:grid-cols-[20rem_minmax(0,1fr)_20rem] 2xl:grid-cols-[22rem_minmax(0,1fr)_24rem]";
 const GRID_MOTION = "xl:transition-[grid-template-columns] xl:duration-300 xl:ease-out-expo";
+/** On the tour the details column slides in slowly, one part at a time (the tour card waits for it). */
+const GRID_MOTION_TOUR = "xl:transition-[grid-template-columns] xl:duration-[900ms] xl:ease-in-out";
 /** The conversation keeps a readable width, centred in whatever room the columns leave it. */
 const CONVERSATION = "mx-auto flex w-full max-w-[46rem] flex-col gap-4 2xl:max-w-[50rem]";
 /**
@@ -145,9 +147,9 @@ export function DeskScreen() {
   const [query, setQuery] = useState("");
   // Clinician and urgent rows fold into one group in the "All" view: nothing there is for the desk to send.
   const [safetyOpen, setSafetyOpen] = useState(false);
-  // The details (the check trail and the patient): kept from message to message once opened, like a reading pane,
-  // and closed again by Reset the demo.
-  const [detailsOpen, setDetailsOpen] = useState(false);
+  // The details (the check trail and the patient) open with every message. Hide details closes them for that message
+  // only: the next message opens with them again, and so does Reset the demo.
+  const [closedFor, setClosedFor] = useState<string | null>(null);
   const side = useSyncExternalStore(subscribeSide, hasSide, () => true);
   const searchRef = useRef<HTMLInputElement>(null);
   const replyRef = useRef<ReplyPanelHandle>(null);
@@ -170,7 +172,7 @@ export function DeskScreen() {
       setSortState("priority");
       setQuery("");
       setSafetyOpen(false);
-      setDetailsOpen(false);
+      setClosedFor(null);
     };
     window.addEventListener(RESET_EVENT, onReset);
     return () => window.removeEventListener(RESET_EVENT, onReset);
@@ -188,6 +190,7 @@ export function DeskScreen() {
   );
   // Nothing opens on its own: the queue leads, and a message opens once it is picked (or from a link with ?m=).
   const selectedId = urlId;
+  const detailsOpen = !!selectedId && closedFor !== selectedId;
   // The prompt's shortcut: the first checked draft, which in the Priority sort is the first row for the desk.
   const firstPick = nav.find((r) => r.status === "ready" && r.sendable) ?? nav[0] ?? visible[0];
   const row: DeskRow | undefined = useMemo(() => rows.find((r) => r.messageId === selectedId), [rows, selectedId]);
@@ -286,11 +289,11 @@ export function DeskScreen() {
   );
 
   // ---------- Details: the check trail and the patient, one click away ----------
-  // The tour's check trail stop points at the trail, so the details show while it is up. The tour measures where
-  // things land, so while it runs the column arrives without the slide.
+  // On the tour the desk opens one part at a time: the queue, then the message (fading in), then at the check trail
+  // stop the details, sliding in slowly. The tour card waits for each to land (TourStop.settleMs).
   const tourStop = useSyncExternalStore(subscribeTour, tourStopId, () => null);
   const touring = tourStop !== null;
-  const showDetails = detailsOpen || tourStop === "checks";
+  const showDetails = touring ? tourStop === "checks" : detailsOpen;
   // The slot the reply panel renders the check trail into (it owns the trail's state).
   const [detailsSlot, setDetailsSlot] = useState<HTMLDivElement | null>(null);
   const detailsRef = useRef<HTMLElement>(null);
@@ -299,12 +302,12 @@ export function DeskScreen() {
   const toggleDetails = useCallback(() => {
     // Below 1280px the details open under the reply, out of sight: they are brought into view and take focus.
     if (!showDetails && !hasSide()) focusDetails.current = true;
-    setDetailsOpen(!showDetails);
-  }, [showDetails]);
+    setClosedFor(showDetails ? (selectedId ?? null) : null);
+  }, [showDetails, selectedId]);
   const closeDetails = useCallback(() => {
-    setDetailsOpen(false);
+    setClosedFor(selectedId ?? null);
     window.requestAnimationFrame(() => toggleRef.current?.focus());
-  }, []);
+  }, [selectedId]);
   useEffect(() => {
     if (!focusDetails.current || !showDetails) return;
     const el = detailsRef.current;
@@ -554,7 +557,8 @@ export function DeskScreen() {
     detail = <DetailSkeleton details={side && showDetails} />;
   } else {
     const data = caseRes.data;
-    // Step three, on request: the check trail (placed by the reply panel) and the patient, under one close button.
+    // Step three, open with the message: the check trail (placed by the reply panel) and the patient, under one close
+    // button.
     const details = showDetails ? (
       <section
         ref={detailsRef}
@@ -570,7 +574,12 @@ export function DeskScreen() {
     ) : null;
     detail = (
       <>
-        <div ref={middleRef} data-desk-reply className="min-w-0 lg:min-h-0 lg:overflow-y-auto lg:px-1 lg:pb-1">
+        <div
+          key={data.messageId}
+          ref={middleRef}
+          data-desk-reply
+          className={cn("min-w-0 lg:min-h-0 lg:overflow-y-auto lg:px-1 lg:pb-1", touring && "animate-tour-reveal")}
+        >
           <div data-tour="desk-conversation" className={CONVERSATION}>
             <MessagePanel
               ref={headingRef}
@@ -651,7 +660,7 @@ export function DeskScreen() {
           "grid min-h-0 flex-1 gap-4 px-4 pb-4 sm:px-6 lg:px-4",
           GRID_BASE,
           selectedId && showDetails ? GRID_OPEN : GRID_CLOSED,
-          !touring && GRID_MOTION,
+          touring ? GRID_MOTION_TOUR : GRID_MOTION,
         )}
       >
         <QueueRail

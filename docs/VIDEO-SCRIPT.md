@@ -12,7 +12,7 @@ Here's a patient asking where their order is. Care Desk has already drafted a re
 
 ## 2. Open the trail (0:28)
 
-[Click **Show details** beside the message title: the details slide in with the check trail. Click **Show steps**, open **Personal details removed** to show what the AI saw, then open **Facts checked**.]
+[The details are open beside the message, with the check trail. Click **Show steps**, open **Personal details removed** to show what the AI saw, then open **Facts checked**.]
 
 Beside it is the trail: everything that happened to this message, step by step. Names, phone numbers and addresses were swapped for placeholders before any AI saw it. A small, fast model sorted it, a stronger one wrote the reply, and then a checker matched every date, amount and tracking number against the records. If one didn't match, the draft would be blocked.
 

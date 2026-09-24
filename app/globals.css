@@ -145,6 +145,9 @@
   --animate-rise-in: rise-in 220ms var(--ease-out-expo) both;
   --animate-toast-in: toast-in 240ms var(--ease-out-expo) both;
   --animate-panel-in: panel-in 260ms var(--ease-out-expo) both;
+  /* The tour's slow reveal of the message column: the queue first, then the message. Opacity only, so the tour can
+     measure where things are while it plays. */
+  --animate-tour-reveal: tour-reveal 800ms ease-out 300ms both;
   --animate-shimmer: shimmer 1.6s linear infinite;
   --animate-spin: spin 0.9s linear infinite;
 }
@@ -197,6 +200,15 @@
   }
 }
 /* The details column arriving from the right, as its track opens */
+@keyframes tour-reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes panel-in {
   from {
     transform: translateX(12px);

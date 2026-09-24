@@ -146,8 +146,9 @@ function ClinicianBody() {
   const selectedId = requested;
   const row = selectedId ? queue.rows.find((r) => r.messageId === selectedId) : undefined;
   const ready = queue.status === "ready";
-  // The details (the order hold and the patient) stay open from item to item once asked for, like a reading pane.
-  const [detailsOpen, setDetailsOpen] = useState(false);
+  // The details (the order hold and the patient) open with every item. Hide details closes them for that item only.
+  const [closedFor, setClosedFor] = useState<string | null>(null);
+  const detailsOpen = !!selectedId && closedFor !== selectedId;
 
   useEffect(() => {
     if (!requested && firstPick && ready) prefetchCase(firstPick.messageId);
@@ -263,7 +264,7 @@ function ClinicianBody() {
                 queueReady={ready}
                 focusTitle={focusTitleFor === selectedId}
                 detailsOpen={detailsOpen}
-                onDetailsChange={setDetailsOpen}
+                onDetailsChange={(open) => setClosedFor(open ? null : (selectedId ?? null))}
               />
             </div>
           ) : queue.status === "error" ? null : ready && visible.length === 0 ? (

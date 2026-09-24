@@ -174,6 +174,16 @@ export function TourProvider({ children }: { children?: ReactNode }) {
   const away = !!tour && !onPage && tour.arrived === tour.stop;
 
   const tourKey = tour ? `${tour.stop}:${tour.ids.routine}:${tour.ids.safety}` : null;
+  // A stop whose page reveals its target slowly (TourStop.settleMs) shows the card once it has landed. No wait with
+  // reduced motion, where nothing moves.
+  const settleMs = stop?.settleMs && !prefersReducedMotion() ? stop.settleMs : 0;
+  const [settledKey, setSettledKey] = useState<string | null>(null);
+  useEffect(() => {
+    if (!settleMs || !tourKey || !onPage) return;
+    const t = window.setTimeout(() => setSettledKey(tourKey), settleMs);
+    return () => window.clearTimeout(t);
+  }, [settleMs, tourKey, onPage]);
+  const settled = !settleMs || settledKey === tourKey;
   const anchorName = stop?.anchor ?? null;
   const anchor = useAnchor(
     tour && onPage && anchorName ? [anchorName, ...(stop!.fallback ?? [])] : null,
@@ -185,7 +195,7 @@ export function TourProvider({ children }: { children?: ReactNode }) {
   // While the next anchor on the same page is being found, the card stays up (at the previous anchor), so focus and
   // position carry over. On a fresh page it waits until the anchor is found, or known to be missing. The closing card
   // has no anchor, so it shows straight away.
-  const showCard = !!tour && onPage && (!anchorName || status !== "searching" || !!el);
+  const showCard = !!tour && onPage && settled && (!anchorName || status !== "searching" || !!el);
   const cardEl = anchorName ? el : null;
   const sheetSpan = stop?.sheetSpan ?? null;
   const placement = usePlacement(showCard ? cardEl : null, popRef, showCard, stop?.park ?? null, stop?.keepClear, sheetSpan);
