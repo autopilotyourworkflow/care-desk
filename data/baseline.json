@@ -1,0 +1,35 @@
+{
+  "label": "Simulated: 4 weeks before Care Desk",
+  "weeks": [
+    {
+      "weekOf": "2026-08-24",
+      "messages": 1164,
+      "medianFirstResponseMin": 312,
+      "medianHandleMin": 9.6
+    },
+    {
+      "weekOf": "2026-08-31",
+      "messages": 1287,
+      "medianFirstResponseMin": 356,
+      "medianHandleMin": 10.1
+    },
+    {
+      "weekOf": "2026-09-07",
+      "messages": 1219,
+      "medianFirstResponseMin": 298,
+      "medianHandleMin": 9.4
+    },
+    {
+      "weekOf": "2026-09-14",
+      "messages": 1242,
+      "medianFirstResponseMin": 327,
+      "medianHandleMin": 9.8
+    }
+  ],
+  "assumptions": {
+    "minutesPerManualReply": 9,
+    "minutesPerReview": 2.5,
+    "weeklyMessages": 1200,
+    "hourlyCostAud": 38
+  }
+}

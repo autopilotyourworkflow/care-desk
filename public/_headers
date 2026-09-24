@@ -1,0 +1,15 @@
+# Workers Static Assets headers (next build copies this to out/_headers). The Worker's /api/* answers set their own.
+# HTML keeps the platform default (max-age=0, must-revalidate) so a redeploy shows at once.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+
+# Hashed build output: the file name changes whenever the content does.
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Demo data read by the pages: short cache, served stale while it refreshes. Not for search engines.
+/data/*
+  Cache-Control: public, max-age=300, stale-while-revalidate=86400
+  X-Robots-Tag: noindex

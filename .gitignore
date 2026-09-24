@@ -1,0 +1,27 @@
+node_modules/
+.next/
+out/
+.wrangler/
+.dev.vars
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+next-env.d.ts
+.impeccable/sketches/
+test-results/
+playwright-report/
+screenshots/tmp/
+
+# Private planning notes: kept locally, never published (they name real people).
+PLAN.md
+PLAN.html
+
+# QA screenshots from the build and review loops (large, local only).
+screenshots/
+
+# Product record for the design tooling: local only (mentions the evaluator and the application).
+PRODUCT.md
+
+# Claude Code rehearsal runs (scripts/cc-run.ts): local only, never published.
+cc-run/

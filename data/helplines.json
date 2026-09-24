@@ -1,0 +1,146 @@
+[
+  {
+    "country": "AU",
+    "kind": "emergency",
+    "name": "Triple Zero (police, fire, ambulance)",
+    "number": "000",
+    "hours": "24 hours, 7 days",
+    "url": "https://www.healthdirect.gov.au/calling-triple-zero",
+    "verifiedOn": "2026-09-23",
+    "note": "112 also works from a mobile phone. Free from any phone."
+  },
+  {
+    "country": "AU",
+    "kind": "crisis",
+    "name": "Lifeline Australia",
+    "number": "13 11 14",
+    "hours": "24 hours, 7 days",
+    "url": "https://www.lifeline.org.au/",
+    "verifiedOn": "2026-09-23",
+    "note": "Text support: 0477 13 11 14, also 24 hours."
+  },
+  {
+    "country": "AU",
+    "kind": "poisons",
+    "name": "Poisons Information Centre",
+    "number": "13 11 26",
+    "hours": "24 hours, 7 days",
+    "url": "https://www.poisonsinfo.nsw.gov.au/about",
+    "verifiedOn": "2026-09-23",
+    "note": "Australia-wide."
+  },
+  {
+    "country": "AU",
+    "kind": "health_advice",
+    "name": "healthdirect helpline",
+    "number": "1800 022 222",
+    "hours": "24 hours, 7 days",
+    "url": "https://www.healthdirect.gov.au/",
+    "verifiedOn": "2026-09-23",
+    "note": "Health advice line."
+  },
+  {
+    "country": "NZ",
+    "kind": "emergency",
+    "name": "Emergency services (police, fire, ambulance)",
+    "number": "111",
+    "hours": "24 hours, 7 days",
+    "url": "https://www.police.govt.nz/call-111",
+    "verifiedOn": "2026-09-23",
+    "note": "Free, and works from a mobile without credit."
+  },
+  {
+    "country": "NZ",
+    "kind": "crisis",
+    "name": "1737, Need to talk?",
+    "number": "1737",
+    "hours": "24 hours, 7 days",
+    "url": "https://1737.org.nz/",
+    "verifiedOn": "2026-09-23",
+    "note": "Call or text 1737. Free, with trained counsellors."
+  },
+  {
+    "country": "NZ",
+    "kind": "poisons",
+    "name": "National Poisons Centre",
+    "number": "0800 764 766",
+    "hours": "24 hours, 7 days",
+    "url": "https://poisons.co.nz/",
+    "verifiedOn": "2026-09-23",
+    "note": "Free for everyone in New Zealand."
+  },
+  {
+    "country": "NZ",
+    "kind": "health_advice",
+    "name": "Healthline",
+    "number": "0800 611 116",
+    "hours": "24 hours, 7 days",
+    "url": "https://www.healthnz.govt.nz/services-support/health-and-disability-providers/healthline",
+    "verifiedOn": "2026-09-23",
+    "note": "Free health advice from nurses and paramedics."
+  },
+  {
+    "country": "UK",
+    "kind": "emergency",
+    "name": "Emergency services",
+    "number": "999",
+    "hours": "24 hours, 7 days",
+    "url": "https://www.nhs.uk/nhs-services/urgent-and-emergency-care-services/when-to-call-999/",
+    "verifiedOn": "2026-09-23",
+    "note": "For life-threatening emergencies."
+  },
+  {
+    "country": "UK",
+    "kind": "crisis",
+    "name": "Samaritans",
+    "number": "116 123",
+    "hours": "24 hours, 7 days",
+    "url": "https://www.samaritans.org/how-we-can-help/contact-samaritan/",
+    "verifiedOn": "2026-09-23",
+    "note": "Free from landlines and mobiles."
+  },
+  {
+    "country": "UK",
+    "kind": "health_advice",
+    "name": "NHS 111 (England)",
+    "number": "111",
+    "hours": "24 hours, 7 days",
+    "url": "https://www.nhs.uk/nhs-services/mental-health-services/where-to-get-urgent-help-for-mental-health/",
+    "verifiedOn": "2026-09-23",
+    "note": "For urgent mental health help, call 111 and select the mental health option. Also for urgent medical help when it is not an emergency.",
+    "region": "England"
+  },
+  {
+    "country": "UK",
+    "region": "Scotland",
+    "kind": "health_advice",
+    "name": "NHS 24 (Scotland)",
+    "number": "111",
+    "hours": "24 hours, 7 days",
+    "url": "https://www.nhsinform.scot/illnesses-and-conditions/mental-health/mental-health-support/get-urgent-mental-health-help/",
+    "verifiedOn": "2026-09-23",
+    "note": "Free, and it does not appear on the phone bill. For urgent mental health help, call 111 and choose the mental health option."
+  },
+  {
+    "country": "UK",
+    "region": "Wales",
+    "kind": "health_advice",
+    "name": "NHS 111 Wales",
+    "number": "111",
+    "hours": "24 hours, 7 days",
+    "url": "https://www.gov.wales/nhs-111-press-2",
+    "verifiedOn": "2026-09-23",
+    "note": "Free from landlines and mobiles, even with no credit. For urgent mental health help, call 111 and press 2."
+  },
+  {
+    "country": "UK",
+    "region": "Northern Ireland",
+    "kind": "crisis",
+    "name": "Lifeline (Northern Ireland)",
+    "number": "0808 808 8000",
+    "hours": "24 hours, 7 days",
+    "url": "https://www.mindingyourhead.info/lifeline",
+    "verifiedOn": "2026-09-23",
+    "note": "Free crisis helpline for anyone living in Northern Ireland. Northern Ireland has no 111 service."
+  }
+]

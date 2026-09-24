@@ -1,0 +1,397 @@
+@import "tailwindcss";
+
+/* ============================================================================
+   Care Desk design system (Tailwind v4, CSS-first)
+   Dispensed's look and feel: brand navy on warm off-white, white 24px cards,
+   16px controls on #eff3f9, pill tags in mint, pale blue and lavender.
+   Poppins for all UI. Clash Display for page titles and the wordmark only.
+
+   The default Tailwind palette, type scale and font stacks are reset on purpose:
+   only the tokens below exist, so screens cannot drift off-brand.
+
+   WCAG 2.2 contrast, text pairs (all >= 4.5:1 unless marked non-text):
+     ink #25292e        on surface #fff 14.63 | canvas #f8f5f0 13.45 | panel #f1ece4 12.44 | field #eff3f9 13.14
+     navy-900 #010337   on surface 19.64 | canvas 18.06 | panel 16.70 | field 17.63 | selected #eceefa 17.00
+     muted #5f6776      on surface 5.69 | canvas 5.24 | panel 4.84 | field 5.11 | inset #f7f8fb 5.36 | field-hover 4.79
+     white              on navy-900 19.64 | navy-700 #1c2168 14.32 | app navy #0a182a 17.84 | urgent-solid #b3131f 6.93
+     on-navy-muted #b8c0ee on navy-900 11.05 | on-navy-soft #c9d0ff on app navy 11.85
+     success-fg #05693f on success-bg #d7f2e0 5.70 | on surface 6.78 | on canvas 6.23
+     info-fg #1b6893    on info-bg #dcefff 5.17 | on surface 6.09 | on canvas 5.60
+     clinician-fg #3a47b8 on clinician-bg #e0e4fc 6.01 | on surface 7.57 | on canvas 6.96
+     urgent-fg #9e1119  on urgent-bg #ffdede 6.58 | on surface 8.24 | on canvas 7.58
+     hold-fg #7d4400    on hold-bg #fdecd0 6.70 | on surface 7.78 | on canvas 7.16
+     warning-fg #7a5a00 on warning-bg #fff3c4 5.74 | on surface 6.38
+       (a check-first fact row on warning-bg also sets muted 5.12, ink 13.15 and navy-900 17.64)
+     error-fg #b42318   on error-bg #fff0f0 5.94 | on surface 6.57
+   Non-text (need >= 3:1): focus #2f6fd6 on surface 4.81, canvas 4.42, panel 4.09;
+     focus-on-navy #8fb4ff on navy-900 9.48; success-icon #078e55 on success-bg 3.53;
+     hold-icon #a65800 on hold-bg 4.50; clinician-accent #6b7cff on surface 3.53;
+     muted-icon #6f7887 on surface 4.46, canvas 4.10, panel 3.79;
+     control-line #7d8596 (input, textarea and select borders, WCAG 1.4.11) on surface 3.71, canvas 3.41,
+     panel 3.15, inset 3.49; hover #6f7887 on surface 4.46. The #eff3f9 fill alone is 1.11 on white, so the border
+     carries the field's edge.
+   Disabled text #8b919b on #eceae6 is 2.64 (exempt under WCAG 1.4.3, paired with not-allowed cursor).
+   Brand muted #6f7887 is 4.46 on white, so it is kept for icons only; text uses #5f6776.
+============================================================================ */
+
+@theme {
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Navy scale, anchored on Dispensed brand navy #010337 (900) */
+  --color-navy-50: #f2f3fb;
+  --color-navy-100: #e4e6f6;
+  --color-navy-200: #c9cdeb;
+  --color-navy-300: #9fa5d6;
+  --color-navy-400: #6c73b8;
+  --color-navy-500: #474e9c;
+  --color-navy-600: #2e3482;
+  --color-navy-700: #1c2168;
+  --color-navy-800: #0e1250;
+  --color-navy-900: #010337;
+  --color-navy-950: #060a20; /* deep navy */
+  --color-navy-app: #0a182a; /* their patient app screens */
+
+  /* Surfaces */
+  --color-canvas: #f8f5f0; /* warm off-white page */
+  --color-surface: #ffffff; /* cards */
+  --color-panel: #f1ece4; /* second neutral layer: rails, toolbars, side panels */
+  --color-inset: #f7f8fb; /* evidence blocks inside a card (never a nested card) */
+  --color-field: #eff3f9; /* input fill, from their app */
+  --color-field-hover: #e6ecf5;
+
+  /* Text */
+  --color-ink: #25292e; /* body text */
+  --color-heading: #010337; /* titles, primary labels */
+  --color-muted: #5f6776; /* secondary text (brand #6f7887 darkened for AA) */
+  --color-muted-icon: #6f7887; /* icons and non-text only */
+  --color-on-navy: #ffffff;
+  --color-on-navy-muted: #b8c0ee;
+
+  /* Lines */
+  --color-line: #e6e1d8; /* on canvas and panel */
+  --color-line-cool: #e4e8ef; /* inside white cards */
+  --color-line-strong: #cfd5df; /* dividers that must read, dashed skipped states */
+  --color-control-line: #7d8596; /* form control borders: 3:1 or better on every surface */
+
+  /* Focus */
+  --color-focus: #2f6fd6;
+  --color-focus-on-navy: #8fb4ff;
+
+  /* State vocabulary */
+  --color-success-bg: #d7f2e0; /* ready, checks passed */
+  --color-success-fg: #05693f;
+  --color-success-icon: #078e55;
+  --color-info-bg: #dcefff; /* information, needs a person */
+  --color-info-fg: #1b6893;
+  --color-clinician-bg: #e0e4fc; /* clinician route */
+  --color-clinician-fg: #3a47b8;
+  --color-clinician-accent: #6b7cff;
+  --color-urgent-bg: #ffdede; /* urgent, stopped */
+  --color-urgent-fg: #9e1119;
+  --color-urgent-solid: #b3131f;
+  --color-hold-bg: #fdecd0; /* orders on hold */
+  --color-hold-fg: #7d4400;
+  --color-hold-icon: #a65800;
+  --color-warning-bg: #fff3c4; /* flagged, low confidence */
+  --color-warning-fg: #7a5a00;
+  --color-error-bg: #fff0f0; /* form and system errors, failed checks */
+  --color-error-fg: #b42318;
+  --color-disabled-bg: #eceae6;
+  --color-disabled-fg: #8b919b;
+  --color-selected-bg: #eceefa;
+  --color-selected-line: #010337;
+
+  /* Type: fixed rem scale, ratio about 1.2 */
+  --text-*: initial;
+  --text-2xs: 0.6875rem;
+  --text-2xs--line-height: 1rem;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.125rem;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.375rem;
+  --text-base: 1rem;
+  --text-base--line-height: 1.5rem;
+  --text-lg: 1.1875rem;
+  --text-lg--line-height: 1.75rem;
+  --text-xl: 1.4375rem;
+  --text-xl--line-height: 2rem;
+  --text-2xl: 1.75rem;
+  --text-2xl--line-height: 2.25rem;
+  --text-3xl: 2.0625rem;
+  --text-3xl--line-height: 2.5rem;
+  --text-4xl: 2.5rem;
+  --text-4xl--line-height: 2.875rem;
+  --text-5xl: 3rem;
+  --text-5xl--line-height: 3.25rem;
+
+  /* Radii */
+  --radius-card: 24px;
+  --radius-control: 16px;
+  --radius-inner: 12px; /* small controls and evidence blocks inside cards */
+  --radius-pill: 9999px;
+
+  /* Soft offset shadows, tinted with brand navy */
+  --shadow-card: 0 1px 2px rgb(1 3 55 / 0.04), 0 6px 20px -10px rgb(1 3 55 / 0.12);
+  --shadow-raised: 0 2px 4px rgb(1 3 55 / 0.05), 0 12px 28px -12px rgb(1 3 55 / 0.18);
+  --shadow-pop: 0 4px 10px -2px rgb(1 3 55 / 0.08), 0 20px 44px -14px rgb(1 3 55 / 0.28);
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+
+  --animate-tick: tick 220ms var(--ease-out-expo) both;
+  --animate-rise-in: rise-in 220ms var(--ease-out-expo) both;
+  --animate-toast-in: toast-in 240ms var(--ease-out-expo) both;
+  --animate-panel-in: panel-in 260ms var(--ease-out-expo) both;
+  --animate-shimmer: shimmer 1.6s linear infinite;
+  --animate-spin: spin 0.9s linear infinite;
+}
+
+/* Font families reference next/font variables set on <html>, so they are inlined. */
+@theme inline {
+  --font-*: initial;
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-display: var(--font-clash), var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+}
+
+:root {
+  --dur-fast: 150ms;
+  --dur-base: 200ms;
+  --dur-slow: 250ms;
+  --trail-stagger: 120ms;
+  --topbar-h: 4rem;
+  color-scheme: light;
+}
+
+@keyframes tick {
+  from {
+    transform: scale(0.6);
+    opacity: 0.35;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes rise-in {
+  from {
+    transform: translateY(4px);
+    opacity: 0.4;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes toast-in {
+  from {
+    transform: translateY(12px) scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+/* The details column arriving from the right, as its track opens */
+@keyframes panel-in {
+  from {
+    transform: translateX(12px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Tabular, lining figures for times, amounts, ids and counts */
+@utility tnum {
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+/* Display voice: page titles and the wordmark only. Never labels, buttons or data. */
+@utility display-title {
+  font-family: var(--font-display);
+  font-weight: 500; /* Dispensed sets its Clash Display headings at 500, untracked */
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+
+/* Smooth expand and collapse with the grid-rows technique */
+@utility collapsible {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--dur-base) var(--ease-out-expo);
+  & > * {
+    min-height: 0;
+    overflow: hidden;
+  }
+  &[data-open="true"] {
+    grid-template-rows: 1fr;
+  }
+}
+
+@layer base {
+  /* WCAG 2.4.11 Focus Not Obscured: the page's scroll area stops short of the sticky top bar (and of a sticky bar
+     stuck under it, or at the bottom of the screen, while one is on the page), so a control that takes focus is
+     scrolled clear of them instead of hiding underneath. Anchor jumps land in the same place, so in-page targets need
+     no scroll-margin of their own for the top bar. */
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    scroll-padding-top: calc(var(--topbar-h) + var(--subbar-h, 0px) + 0.75rem);
+    scroll-padding-bottom: calc(var(--bottombar-h, 0px) + 0.75rem);
+  }
+  /* The desk's reply column scrolls on its own on large screens, with its action bar stuck to the column's foot. */
+  [data-desk-reply] {
+    scroll-padding-bottom: calc(var(--bottombar-h, 0px) + 0.75rem);
+  }
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    line-height: var(--text-sm--line-height);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-heading);
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    background-color: var(--color-navy-100);
+    color: var(--color-navy-900);
+  }
+
+  /* One focus language everywhere. The outline colour is set on every element up front, so a transition-colors
+     class never fades the ring in from the text colour. */
+  *,
+  *::before,
+  *::after {
+    outline-color: var(--color-focus);
+  }
+  .on-navy *,
+  [data-surface="navy"] * {
+    outline-color: var(--color-focus-on-navy);
+  }
+  :focus {
+    outline-style: none; /* style only, so the colour set above stays put */
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+  .on-navy :focus-visible,
+  [data-surface="navy"] :focus-visible {
+    outline-color: var(--color-focus-on-navy);
+  }
+  /* Inputs show focus as a ring on the field itself */
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline-offset: 0;
+  }
+
+  mark {
+    background-color: var(--color-urgent-bg);
+    color: var(--color-urgent-fg);
+    border-radius: 4px;
+    padding: 0 2px;
+    font-weight: 600;
+  }
+  /* Marks follow the stop they sit under: red only for urgent, lavender for a clinician stop (6.01),
+     amber for a hold request on a routine message (6.70). */
+  [data-tone="clinician"] mark {
+    background-color: var(--color-clinician-bg);
+    color: var(--color-clinician-fg);
+  }
+  [data-tone="hold"] mark {
+    background-color: var(--color-hold-bg);
+    color: var(--color-hold-fg);
+  }
+  [data-tone="urgent"] mark {
+    background-color: var(--color-urgent-bg);
+    color: var(--color-urgent-fg);
+  }
+
+  [popover] {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    overflow: visible;
+  }
+  [popover]::backdrop {
+    background: transparent;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  summary {
+    cursor: pointer;
+  }
+}
+
+/* Room the sticky bars take, read by the scroll padding above and by the toasts. A bar marks itself with
+   data-subbar (stuck just under the top bar, e.g. the phone "Back to the queue" bar) or data-bottombar (stuck to the
+   bottom of the screen, e.g. the Send bar); the class pairs match the same bars by where they stick. Heights are the
+   bars' own: 0.5rem padding, a 2.5rem button and a 1px rule for the sub-bar; for the Send bar, its padding, one row
+   of 2.5rem buttons and a line of help text, or two rows of buttons where they wrap on a phone. */
+@media (max-width: 1023.98px) {
+  :root:has([data-subbar], .sticky.top-16) {
+    --subbar-h: calc(3.5rem + 1px);
+  }
+}
+:root:has([data-bottombar], .sticky.bottom-0) {
+  --bottombar-h: 6rem;
+}
+@media (max-width: 39.98rem) {
+  :root:has([data-bottombar], .sticky.bottom-0) {
+    --bottombar-h: 9rem;
+  }
+}
+
+/* Reduced motion: end states at once, nothing moves */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Backstop, deliberately unlayered: Next's built-in error pages inject an unlayered `body{}` rule inside a
+   prefers-color-scheme: dark query, which would beat the layered bg-canvas and leave navy headings on black.
+   `html body` outranks it in both schemes. */
+html body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+}

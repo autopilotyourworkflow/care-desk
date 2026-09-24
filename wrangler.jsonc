@@ -1,0 +1,38 @@
+// Care Desk: one Worker serves the static export in ./out and answers /api/* for the live "Try a message" box.
+// Secrets (never in this file): npx wrangler secret put ANTHROPIC_API_KEY | VIP_TOKENS | ADMIN_TOKEN | TURNSTILE_SECRET
+// account_id is left out on purpose: set CLOUDFLARE_ACCOUNT_ID (a local, gitignored .env works) at deploy time.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "care-desk",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-09-23",
+  // enable_request_signal: request.signal aborts when the visitor's page goes away, so a live run stops calling Claude.
+  "compatibility_flags": ["nodejs_compat", "enable_request_signal"],
+  "assets": {
+    "directory": "./out",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash",
+    "run_worker_first": ["/api/*", "/*/__next.*"]
+  },
+  "kv_namespaces": [
+    {
+      // Created 2026-09-24 with: npx wrangler kv namespace create CARE_DESK_KV
+      "binding": "CARE_DESK_KV",
+      "id": "6bdbb86dd45e4f60adb6cbeba2fb1d81"
+    }
+  ],
+  "vars": {
+    "MOCK": "0"
+  },
+  "routes": [
+    {
+      "pattern": "caredesk.autopilotyourworkflow.com",
+      "custom_domain": true
+    }
+  ],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  }
+}

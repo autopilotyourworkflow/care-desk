@@ -1,0 +1,23 @@
+# Copy to .dev.vars for `npx wrangler dev`. Never commit .dev.vars. In production set each one with
+#   npx wrangler secret put <NAME>
+# All are optional locally: with MOCK=1 the sample sorter and drafter answer, so no key is needed.
+
+# Claude API key for the live box (sort + draft).
+ANTHROPIC_API_KEY=
+
+# Private-link tokens, comma separated, at least 12 characters each. The page sends ?k=<token> as X-Care-Desk-Key.
+# They get their own daily budget (vipDailyUsd) and hourly limit (vipPerVisitorPerHour).
+VIP_TOKENS=
+
+# Bearer token for GET /api/status (today's spend, requests and limits).
+ADMIN_TOKEN=
+
+# Cloudflare Turnstile secret. Leave empty to skip the bot check. The page shows the widget only when
+# NEXT_PUBLIC_TURNSTILE_SITE_KEY is set at build time.
+TURNSTILE_SECRET=
+
+# "1" = sample (mock) sorter and drafter, for local testing without a key. "0" in production.
+MOCK=1
+
+# Optional salt for the hourly visitor hash (IP + user agent). Any long random string.
+VISITOR_SALT=

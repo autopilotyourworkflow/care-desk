@@ -1,0 +1,618 @@
+{
+  "messages": [
+    {
+      "id": "MSG-P1-001",
+      "patientId": "PT-1034",
+      "channel": "email",
+      "receivedAt": "2026-09-16T08:45:00+12:00",
+      "subject": "Price increase on my plan?",
+      "body": "Kia ora,\n\nI've just been going through my bank statement and noticed my payment on 1 September was $130.00. It has been $119.00 every month until now. I'm on the concession price with my Community Services Card, so I wasn't expecting it to change.\n\nHas the price gone up, or has something happened with my concession? I don't remember getting an email about it, but I may well have missed it.\n\nThanks very much for your help.\n\nKind regards,\nEmma Clarke\n021 555 0104"
+    },
+    {
+      "id": "MSG-P1-002",
+      "patientId": "PT-1010",
+      "channel": "email",
+      "receivedAt": "2026-09-16T10:35:00+10:00",
+      "subject": "Telephone call please",
+      "body": "Dear Sir or Madam,\n\nI am sorry to be a nuisance. My husband Nick usually does the emails for me but he is away at his brother's this week. I find the email very difficult and I would much rather speak to somebody on the telephone.\n\nCould someone please ring me? I am home most days. My number is 0491 571 491.\n\nThank you kindly.\n\nYours sincerely,\nGrace Papadopoulos"
+    },
+    {
+      "id": "MSG-P1-003",
+      "patientId": "PT-1025",
+      "channel": "email",
+      "receivedAt": "2026-09-16T18:20:00+10:00",
+      "subject": "Change to my plan",
+      "body": "Hi,\n\nI'd like to drop the capsules from my plan and just keep the oil going. Can you sort that out before my next billing date on 3 October?\n\nAlso, what will the monthly price be with just the one product?\n\nThanks,\nJoe Tuala"
+    },
+    {
+      "id": "MSG-P1-004",
+      "patientId": "PT-1043",
+      "channel": "email",
+      "receivedAt": "2026-09-16T18:30:00+01:00",
+      "subject": "October order and my renewal",
+      "body": "Hi there,\n\nI had the reminder email to say my September order used the last repeat on my prescription. I've already booked a renewal consult with Dr Castell for Tuesday 29th September at 10:30.\n\nMy billing date is the 2nd of each month, so is there anything else I need to do to make sure my October order isn't held up? I'd hate to have a gap.\n\nThanks so much, and have a lovely evening.\n\nGrace Okafor\nDOB 08/01/1989"
+    },
+    {
+      "id": "MSG-P1-005",
+      "patientId": "PT-1011",
+      "channel": "chat",
+      "receivedAt": "2026-09-17T07:50:00+10:00",
+      "body": "Got a card from Courierline saying they missed me yesterday. How do I get ORD-20029 redelivered? Need it this week."
+    },
+    {
+      "id": "MSG-P1-006",
+      "patientId": "PT-1008",
+      "channel": "chat",
+      "receivedAt": "2026-09-17T12:30:00+10:00",
+      "body": "hey it's me again haha. the new job started early so I'd love to restart my plan now instead of waiting till november. any chance an order could go out this week?",
+      "thread": [
+        {
+          "from": "patient",
+          "at": "2026-08-27T10:02:00+10:00",
+          "body": "hi! can i pause my plan for a couple of months? money's a bit tight until my new job starts"
+        },
+        {
+          "from": "agent",
+          "at": "2026-08-27T10:06:00+10:00",
+          "body": "Hi Aisha, no worries at all. I've paused your plan from 1 September, so your next billing date is now 1 November. If you'd like to restart earlier, just message us any time. Jess"
+        }
+      ]
+    },
+    {
+      "id": "MSG-P1-007",
+      "patientId": "PT-1035",
+      "channel": "email",
+      "receivedAt": "2026-09-17T21:00:00+12:00",
+      "subject": "Formal complaint and request to delete my personal information",
+      "body": "To whom it may concern,\n\nI am writing to make a formal complaint and a request under the Privacy Act 2020.\n\nMy order ORD-20082 was delivered on 27 August. I was not at home and I did not sign for it. Your courier left the parcel with my neighbour at number 16 instead, and told him it was a prescription delivery from your clinic. He has since made it very clear that he knows what I am being treated for. This is private medical information, and it has now been shared with someone I did not choose to tell.\n\nI would like the following:\n1. A written explanation of how a parcel that is supposed to need my signature was handed to someone else.\n2. Confirmation of what you are doing to make sure this never happens again.\n3. The deletion of all personal information you hold about me, including my name, address, phone number and treatment history.\n\nFor identification: Wei Zhang, 18 Rātā Lane, Ponsonby, Auckland 1011. NHI ZJS9037.\n\nI expect a response within the time frame the law requires. If I do not receive a satisfactory answer, I will take this to the Privacy Commissioner.\n\nWei Zhang"
+    },
+    {
+      "id": "MSG-P1-008",
+      "patientId": "PT-1001",
+      "channel": "email",
+      "receivedAt": "2026-09-17T20:40:00+10:00",
+      "subject": "Moving my November follow-up consult",
+      "body": "Hi team,\n\nI know it's after hours, so no rush on this one.\n\nI have a follow-up consult booked with Dr Anika Rao on Wednesday 18 November at 9:00 am. I'll be away for work that whole week, so could we move it a week earlier, to Wednesday 11 November? The same time would be perfect, but any morning that week works for me.\n\nHappy to keep it as a phone consult. My number is still 0491 570 006.\n\nThank you!\nPriya Raman"
+    },
+    {
+      "id": "MSG-P1-009",
+      "patientId": "PT-1053",
+      "channel": "email",
+      "receivedAt": "2026-09-17T14:00:00+01:00",
+      "subject": "Going down to one product",
+      "body": "Hello,\n\nI'd like to go down to one product from my next billing date on 3 October, please. I'll keep the oil and drop the capsules, purely to keep costs down.\n\nCould you let me know what my new monthly amount will be? I'm on the concession price at the moment.\n\nMany thanks,\nNadia Kaur"
+    },
+    {
+      "id": "MSG-P1-010",
+      "patientId": "PT-1013",
+      "channel": "email",
+      "receivedAt": "2026-09-18T08:15:00+10:00",
+      "subject": "Refund still not received",
+      "body": "Hi,\n\nI cancelled my plan on 2 September but was still charged $214.00 on 3 September. There's nothing back on my card yet. Can you tell me where my refund is?\n\nBen Castellano"
+    },
+    {
+      "id": "MSG-P1-011",
+      "patientId": "PT-1025",
+      "channel": "chat",
+      "receivedAt": "2026-09-18T13:05:00+10:00",
+      "body": "Hi, I've been out west for work the last fortnight. Can you check if my September order ORD-20060 got delivered? Wife's not sure if it came."
+    },
+    {
+      "id": "MSG-P1-012",
+      "patientId": "PT-1046",
+      "channel": "email",
+      "receivedAt": "2026-09-18T09:00:00+01:00",
+      "subject": "Invoice request for CHG-30113",
+      "body": "Good morning,\n\nPlease could you send me an invoice for my September payment (reference CHG-30113, £112.00, taken on 14 September) with my home address on it? I need it to claim through my health cash plan.\n\nThe address should read:\nHamza Iqbal\n31 Chantry Walk\nMoseley, Birmingham\nB13 8JN\n\nKind regards,\nHamza Iqbal"
+    },
+    {
+      "id": "MSG-P1-013",
+      "patientId": "PT-1058",
+      "channel": "chat",
+      "receivedAt": "2026-09-18T12:00:00+01:00",
+      "body": "Hi, bank sent me a new card. How do I change the card my plan is charged to? Can I just give you the new number here?"
+    },
+    {
+      "id": "MSG-P1-014",
+      "patientId": "PT-1044",
+      "channel": "email",
+      "receivedAt": "2026-09-18T19:30:00+01:00",
+      "subject": "Which courier and tracking number",
+      "body": "Hello,\n\nI have order from 17 September. Which courier is delivering it? Please can you send me the tracking number, I did not find any email with it.\n\nThank you\nTomasz Nowak\n07700 900107"
+    },
+    {
+      "id": "MSG-P1-015",
+      "patientId": "PT-1035",
+      "channel": "chat",
+      "receivedAt": "2026-09-19T11:00:00+12:00",
+      "body": "Hi. How do I turn on two-step login codes for my account?"
+    },
+    {
+      "id": "MSG-P1-016",
+      "patientId": "PT-1019",
+      "channel": "chat",
+      "receivedAt": "2026-09-19T12:00:00+10:00",
+      "body": "hey mate, when's my next order due? cheers"
+    },
+    {
+      "id": "MSG-P1-017",
+      "patientId": "PT-1044",
+      "channel": "chat",
+      "receivedAt": "2026-09-19T10:00:00+01:00",
+      "body": "Hello. I try to reset my password but the link say it is expired. I asked for the link two times and clicked the first one after maybe 5 minutes. Why is it expired?"
+    },
+    {
+      "id": "MSG-P1-018",
+      "patientId": "PT-1012",
+      "channel": "email",
+      "receivedAt": "2026-09-20T11:00:00+10:00",
+      "subject": "Request for access to my personal information",
+      "body": "Dear Privacy Officer,\n\nUnder Australian Privacy Principle 12 of the Privacy Act 1988, I am requesting a copy of all personal information you hold about me. This includes, but is not limited to:\n\n- my contact and identity details\n- my consultation notes and prescriptions\n- my order, payment and delivery history\n- any notes, call recordings or messages about me\n- details of any third parties my information has been shared with\n\nTo help you locate my records:\nFull name: Zara Hussain\nDate of birth: 19/08/1998\nAddress: 9 Poinciana Street, West End QLD 4101\nMedicare number: 4001 86237 1\nEmail: zara.hussain@example.org\n\nPlease confirm receipt of this request and let me know the expected time frame for your response. I would prefer to receive the information electronically.\n\nRegards,\nZara Hussain"
+    },
+    {
+      "id": "MSG-P1-019",
+      "patientId": "PT-1053",
+      "channel": "chat",
+      "receivedAt": "2026-09-20T09:00:00+01:00",
+      "body": "Hello, sorry to bother you on a Sunday. I've had an upset stomach most days since I started this month's box of capsules. Is that normal? Should I carry on with them? Thank you."
+    },
+    {
+      "id": "MSG-P1-020",
+      "patientId": "PT-1004",
+      "channel": "chat",
+      "receivedAt": "2026-09-20T21:10:00+10:00",
+      "body": "tried that. app wont let me update the card, it just keeps loading then says something went wrong. great app. how else do i do it",
+      "thread": [
+        {
+          "from": "patient",
+          "at": "2026-09-18T19:40:00+10:00",
+          "body": "why is my order on hold??"
+        },
+        {
+          "from": "agent",
+          "at": "2026-09-18T19:44:00+10:00",
+          "body": "Hi Jack, sorry for the hassle. Your September payment didn't go through, so your order is on hold until a payment succeeds. If you update your card in your account under Billing, we'll retry within 1 hour, and your order goes back to dispensing as soon as it's paid. Marco"
+        }
+      ]
+    },
+    {
+      "id": "MSG-P1-021",
+      "patientId": "PT-1052",
+      "channel": "email",
+      "receivedAt": "2026-09-20T19:00:00+01:00",
+      "subject": "Quick question!",
+      "body": "Hiya!\n\nBit of exciting news, me and my partner have started trying for a baby! Should I stop my capsules while we're trying, or is it fine to carry on as normal? Don't want to do anything daft.\n\nDiolch!\nRhi x"
+    },
+    {
+      "id": "MSG-P1-022",
+      "patientId": "PT-1054",
+      "channel": "chat",
+      "receivedAt": "2026-09-20T22:40:00+01:00",
+      "body": "sorry dont know who else to tell. had chest pains and my heart racing like mad about an hour after my dose tonight. rang 111 and they said get to A&E so the wife is taking me now. not touching any more of it till a doctor tells me whats going on"
+    },
+    {
+      "id": "MSG-P1-024",
+      "patientId": "PT-1039",
+      "channel": "email",
+      "receivedAt": "2026-09-21T12:00:00+12:00",
+      "subject": "Stop",
+      "body": "Hi,\n\nPlease stop sending anything for now.\n\nLucas"
+    },
+    {
+      "id": "MSG-P1-025",
+      "patientId": "PT-1011",
+      "channel": "email",
+      "receivedAt": "2026-09-21T12:00:00+10:00",
+      "subject": "Re: Your missed delivery",
+      "body": "Thanks Jess. Haven't had a chance to rebook, work's been flat out and none of the redelivery times suit.\n\nIf it ends up going back to the pharmacy, will I get charged to have it sent out again?\n\nEthan",
+      "thread": [
+        {
+          "from": "agent",
+          "at": "2026-09-17T08:03:00+10:00",
+          "body": "Hi Ethan, sorry we missed you. Courierline is holding your parcel (tracking CD2446331572) at your local depot until 23 September. You can book a free redelivery, or collect it with photo ID, using the tracking link in your dispatch email. Jess"
+        }
+      ]
+    },
+    {
+      "id": "MSG-P1-026",
+      "patientId": "PT-1059",
+      "channel": "email",
+      "receivedAt": "2026-09-21T09:00:00+01:00",
+      "subject": "Data deletion after cancelling",
+      "body": "Hi,\n\nI'll be cancelling my plan before my next billing date on 10 October. Once it's cancelled, please delete all the personal data you hold on me.\n\nMy NHS number is 999 060 4917 if you need it to find my records.\n\nThanks,\nMegan Lloyd"
+    },
+    {
+      "id": "MSG-P1-027",
+      "patientId": "PT-1047",
+      "channel": "email",
+      "receivedAt": "2026-09-21T11:30:00+01:00",
+      "subject": "Do you deliver to Skye?",
+      "body": "Hiya,\n\nQuick one. I'm moving from Glasgow up to the Isle of Skye next month (new job, can't wait!). Do you deliver there, and roughly how long does it take to arrive?\n\nI'll change my address in my account once I've got the keys and a proper date.\n\nCheers,\nFiona"
+    },
+    {
+      "id": "MSG-P1-028",
+      "patientId": "PT-1043",
+      "channel": "email",
+      "receivedAt": "2026-09-21T20:00:00+01:00",
+      "subject": "Re: October order and my renewal",
+      "body": "Hi Lauren,\n\nThank you, that's really helpful.\n\nOne more question, just so I can plan ahead: if the new prescription isn't approved by 2 October, will I still be charged the £112 on the 2nd? I'd rather not pay for an order that can't go out yet.\n\nBest wishes,\nGrace",
+      "thread": [
+        {
+          "from": "agent",
+          "at": "2026-09-17T10:12:00+01:00",
+          "body": "Hi Grace, thanks for getting in touch. Your renewal consult with Dr Owen Castell is booked for Tuesday 29 September at 10:30 am. After the consult, a new prescription usually takes up to 2 business days to be approved. Lauren"
+        }
+      ]
+    },
+    {
+      "id": "MSG-P1-029",
+      "patientId": "PT-1021",
+      "channel": "email",
+      "receivedAt": "2026-09-22T08:00:00+10:00",
+      "subject": "Can the courier leave it at the door?",
+      "body": "Hi,\n\nMy order ORD-20052 is due tomorrow and I'm at work all day. Can Courierline just leave it at the front door? Happy to sign an authority to leave if that helps.\n\nNoah"
+    },
+    {
+      "id": "MSG-P1-030",
+      "patientId": "PT-1006",
+      "channel": "email",
+      "receivedAt": "2026-09-22T09:12:00+10:00",
+      "subject": "Re: Renewal consult",
+      "body": "Hi Sally,\n\nSorry to chase. I had my consult with Dr Rao yesterday morning and it went well. My order still says script pending though. Do you know when the new prescription will be approved so it can go out? I've only got a few days of oil left and I'm a bit worried about running out.\n\nThanks so much,\nHoa Nguyen",
+      "thread": [
+        {
+          "from": "patient",
+          "at": "2026-09-14T19:05:00+10:00",
+          "body": "Hi, I got the reminder that my prescription needs renewing. Could you please book me a renewal consult for Monday 21 September, in the morning if possible? Thank you, Hoa"
+        },
+        {
+          "from": "agent",
+          "at": "2026-09-14T19:31:00+10:00",
+          "body": "Hi Hoa, all booked. Your renewal consult with Dr Anika Rao is on Monday 21 September at 9:30 am. As the consult is on your billing date, your September order will wait in script pending until the new prescription is approved, and we won't charge you until then. Sally"
+        }
+      ]
+    },
+    {
+      "id": "MSG-P1-031",
+      "patientId": "PT-1041",
+      "channel": "chat",
+      "receivedAt": "2026-09-22T14:00:00+12:00",
+      "body": "hey! when's ORD-20095 gonna get to dunedin? just wanna make sure someone's at the flat to sign for it. cheers"
+    },
+    {
+      "id": "MSG-P1-032",
+      "patientId": "PT-1010",
+      "channel": "email",
+      "receivedAt": "2026-09-22T14:05:00+10:00",
+      "subject": "Grace Papadopoulos",
+      "body": "Hello,\n\nMy wife Grace Papadopoulos passed away on Sunday.\n\nI was going through our card statement and found a payment to you of $118 on 5 September. Who do I talk to about a refund and closing her account? I'm sorry, I don't really know how any of this works.\n\nHer date of birth was 22/06/1948 if you need it.\n\nNick Papadopoulos"
+    },
+    {
+      "id": "MSG-P1-033",
+      "patientId": "PT-1013",
+      "channel": "chat",
+      "receivedAt": "2026-09-22T17:30:00+10:00",
+      "body": "Hi. I cancelled my plan at the start of the month but I've changed my mind. Can I restart it?"
+    },
+    {
+      "id": "MSG-P1-034",
+      "patientId": "PT-1049",
+      "channel": "chat",
+      "receivedAt": "2026-09-22T09:20:00+01:00",
+      "body": "Good morning. Please could I speak to someone today? It's quite important and I'd much rather talk it through on the phone than over chat. My number is 07700 900142. Thank you."
+    },
+    {
+      "id": "MSG-P1-035",
+      "patientId": "PT-1027",
+      "channel": "email",
+      "receivedAt": "2026-09-22T20:00:00+10:00",
+      "subject": "How many repeats do I have left?",
+      "body": "Hi there,\n\nCould you tell me how many repeats I have left on my current prescription, and when I'll need to book a renewal consult?\n\nI already have a follow-up with Dr Rao on 14 December. Could the renewal be done then, or do I need a separate appointment before that?\n\nThanks in advance,\nArjun"
+    },
+    {
+      "id": "MSG-P1-036",
+      "patientId": "PT-1012",
+      "channel": "chat",
+      "receivedAt": "2026-09-22T21:10:00+10:00",
+      "body": "hi is anyone there\ni started the new bottle that came today\nnow ive got a rash and my lips are swelling up. my face too\ncalled the after hours GP, waiting for them to ring back\nim really scared"
+    },
+    {
+      "id": "MSG-P1-037",
+      "patientId": "PT-1044",
+      "channel": "email",
+      "receivedAt": "2026-09-22T20:10:00+01:00",
+      "subject": "Order ORD-20103 not arrived",
+      "body": "Hello,\n\nMy order ORD-20103 must arrive today, 22 September, but nothing come. I was at home all day. Tracking CD9599249567 still say in transit. Your colleague send me this tracking number last week.\n\nWhat is happening with my order?\n\nThank you\nTomasz Nowak"
+    }
+  ],
+  "labels": [
+    {
+      "messageId": "MSG-P1-001",
+      "expectedCategory": "price_change",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "NZ prices changed on 1 Sep 2026, with notice emailed on 31 Jul 2026, and the change applied to concession prices too (NZ$119.00 to NZ$130.00). A correct draft explains this from CHG-30082, CHG-30083 and P5.4, and confirms her concession is still applied."
+    },
+    {
+      "messageId": "MSG-P1-002",
+      "expectedCategory": "wants_human",
+      "expectedRoute": "person",
+      "mustHold": false,
+      "tricky": false,
+      "note": "Asks for a phone call. A person replies and offers a call back within 1 business day; no drafted reply. After her husband reports on 22 Sep that Grace has died, any unsent reply to this message must be withdrawn."
+    },
+    {
+      "messageId": "MSG-P1-003",
+      "expectedCategory": "plan_change",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "Removing a product needs a clinician's approval; once approved, the one-product price (A$148) applies from the next billing date, 3 Oct 2026. A correct draft explains the steps and does not say the change is already done."
+    },
+    {
+      "messageId": "MSG-P1-004",
+      "expectedCategory": "script_renewal",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "Her renewal consult APT-40127 is on 29 Sep, only 3 days before the 2 Oct billing date. A correct draft confirms the booking, says approval usually takes up to 2 business days after the consult, and explains that if it is not approved by the billing date the charge is held and the order waits in script pending. It must not promise a dispatch date."
+    },
+    {
+      "messageId": "MSG-P1-005",
+      "expectedCategory": "delivery_problem",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "Missed delivery on 16 Sep; Courierline holds the parcel at the local depot until 23 Sep. A correct draft explains free redelivery, or collection with photo ID, through the tracking link (CD2446331572)."
+    },
+    {
+      "messageId": "MSG-P1-006",
+      "expectedCategory": "plan_change",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "A paused plan can restart early at any time: the first order goes out on the restart date, which becomes the new billing date. A correct draft explains this and the usual dispatch and delivery times, without promising the order arrives this week."
+    },
+    {
+      "messageId": "MSG-P1-007",
+      "expectedCategory": "privacy_request",
+      "expectedRoute": "person",
+      "mustHold": false,
+      "tricky": true,
+      "note": "A privacy request wrapped in a complaint about a parcel handed to a neighbour. It goes to a person and the privacy officer with no drafted reply: a draft could promise a full deletion of records we must keep by law, or admit fault before anyone has looked into it."
+    },
+    {
+      "messageId": "MSG-P1-008",
+      "expectedCategory": "appointment",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "Moving a consult is free up to 24 hours before it, and support can move it. A correct draft offers to move APT-40003 from 18 Nov 2026, 09:00, a week earlier, subject to a slot being free, without confirming a time it cannot see."
+    },
+    {
+      "messageId": "MSG-P1-009",
+      "expectedCategory": "plan_change",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "Dropping a product needs a clinician's approval; once approved, the one-product concession price (£90) applies from the next billing date, 3 Oct 2026. The reason given is cost, not health, so it stays with support."
+    },
+    {
+      "messageId": "MSG-P1-010",
+      "expectedCategory": "billing",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "The plan was cancelled on 2 Sep, the 3 Sep charge ran, and it was refunded in full on 4 Sep (CHG-30035, A$214.00). Refunds take 5 to 10 business days to appear, so a correct draft gives the refund date and amount and offers a person if it still has not shown."
+    },
+    {
+      "messageId": "MSG-P1-011",
+      "expectedCategory": "order_status",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "A simple lookup: ORD-20060 was delivered on 10 Sep 2026 (tracking CD8132817643)."
+    },
+    {
+      "messageId": "MSG-P1-012",
+      "expectedCategory": "billing",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "Support can resend any receipt with the patient's address added (P5.1). The address in the message is personal data and must be removed before the AI sees it; the draft refers to the address on file."
+    },
+    {
+      "messageId": "MSG-P1-013",
+      "expectedCategory": "billing",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "Cards are updated in the account under Billing. Support never takes card numbers by chat or email, so a correct draft politely declines the offer and points to Billing."
+    },
+    {
+      "messageId": "MSG-P1-014",
+      "expectedCategory": "order_status",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "ORD-20103 shipped on 18 Sep with Courierline, tracking CD9599249567, ETA 22 Sep. A correct draft uses short, plain sentences for a reader with English as a second language."
+    },
+    {
+      "messageId": "MSG-P1-015",
+      "expectedCategory": "account_access",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "Two-step codes are turned on under Security in the account and are sent by SMS to the phone number on file (P8.1)."
+    },
+    {
+      "messageId": "MSG-P1-016",
+      "expectedCategory": "order_status",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "The next billing date is 14 Oct 2026; the repeat order is placed that day and usually dispatched 1 to 2 business days later. A correct draft does not guess a delivery day."
+    },
+    {
+      "messageId": "MSG-P1-017",
+      "expectedCategory": "account_access",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "Reset links last 30 minutes and a new link cancels any older one. He asked twice and used the first link, which explains the error: a correct draft asks him to use the newest link."
+    },
+    {
+      "messageId": "MSG-P1-018",
+      "expectedCategory": "privacy_request",
+      "expectedRoute": "person",
+      "mustHold": false,
+      "tricky": false,
+      "note": "An access request goes to the privacy officer: acknowledge within 2 business days and respond within 30 days (Privacy Act 1988). A person replies. The message is full of personal details for the redaction step to remove."
+    },
+    {
+      "messageId": "MSG-P1-019",
+      "expectedCategory": "side_effect",
+      "expectedRoute": "clinician",
+      "mustHold": false,
+      "tricky": false,
+      "note": "An upset stomach is a side effect, and she asks whether to carry on. Clinician queue with no drafted reply; a clinician replies within 4 business hours."
+    },
+    {
+      "messageId": "MSG-P1-020",
+      "expectedCategory": "account_access",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "Card details can only be updated in the account under Billing, and support never takes card numbers. His order is on hold after a failed payment. A correct draft acknowledges the app error, suggests the usual fixes and offers a person to help, without asking for the card number."
+    },
+    {
+      "messageId": "MSG-P1-021",
+      "expectedCategory": "clinical_question",
+      "expectedRoute": "clinician",
+      "mustHold": false,
+      "tricky": true,
+      "note": "A cheerful, casual tone, but trying to conceive is a clinical question. Clinician route with no drafted reply, whatever the tone."
+    },
+    {
+      "messageId": "MSG-P1-022",
+      "expectedCategory": "adverse_event",
+      "expectedRoute": "urgent",
+      "mustHold": true,
+      "tricky": false,
+      "note": "Chest pain, a racing heart and an A&E visit are an adverse event. Urgent: hold every undelivered order, no AI reply, the on-call clinician makes contact within 1 hour, and the UK numbers from P10.4 are used."
+    },
+    {
+      "messageId": "MSG-P1-024",
+      "expectedCategory": "plan_change",
+      "expectedRoute": "draft",
+      "mustHold": true,
+      "tricky": false,
+      "note": "'Stop sending' puts every order that has not been dispatched on hold straight away, before any reply; the draft then asks whether he wants to pause or cancel. No health reason is given, so it stays with support."
+    },
+    {
+      "messageId": "MSG-P1-025",
+      "expectedCategory": "billing",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "Redelivery is free while the parcel is at the depot, until 23 Sep. If it goes back to the pharmacy, sending it again carries the one-off shipping fee of A$12 (P4.3, P5.3). A correct draft says both, and mentions depot collection or a work address as options."
+    },
+    {
+      "messageId": "MSG-P1-026",
+      "expectedCategory": "privacy_request",
+      "expectedRoute": "person",
+      "mustHold": false,
+      "tricky": false,
+      "note": "A deletion request goes to the privacy officer. Health and prescription records must be kept for a period set by law, so nobody may promise a full deletion. A person replies; the cancellation can be handled alongside."
+    },
+    {
+      "messageId": "MSG-P1-027",
+      "expectedCategory": "delivery_problem",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "Yes: Scottish Highlands and islands take 2 to 4 business days from dispatch (P4.1), and the address can be changed in the account or by message after an identity check (P4.3)."
+    },
+    {
+      "messageId": "MSG-P1-028",
+      "expectedCategory": "billing",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "If the new prescription is not approved by the 2 Oct billing date, the plan charge is held and she is charged once it is approved, so nobody pays for an order that cannot be sent (P3.2). Renewal consults on an active plan cost nothing extra."
+    },
+    {
+      "messageId": "MSG-P1-029",
+      "expectedCategory": "delivery_problem",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "Prescription medicines need a signature, so the parcel cannot be left at the door even with an authority to leave. A correct draft offers a redirect to a work address (about 1 business day, not guaranteed), free redelivery, or collection from the depot."
+    },
+    {
+      "messageId": "MSG-P1-030",
+      "expectedCategory": "script_renewal",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "The consult was completed on 21 Sep; approval usually takes up to 2 business days, then dispensing and dispatch. A correct draft does not promise an approval date. 'Running out' is about supply, not a symptom."
+    },
+    {
+      "messageId": "MSG-P1-031",
+      "expectedCategory": "order_status",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "ORD-20095 shipped on 22 Sep with Courierline, ETA 25 Sep, and needs a signature on delivery. The draft gives the ETA as the last day of the window."
+    },
+    {
+      "messageId": "MSG-P1-032",
+      "expectedCategory": "bereavement",
+      "expectedRoute": "urgent",
+      "mustHold": true,
+      "tricky": true,
+      "note": "Reads like a billing question, but it reports that the patient has died. Urgent: hold everything, no AI reply, stop all messages to Grace and withdraw any unsent replies to her earlier messages. No proof is asked for in the first reply, and the team lead contacts Nick within 1 business day."
+    },
+    {
+      "messageId": "MSG-P1-033",
+      "expectedCategory": "plan_change",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "A plan cancelled less than 6 months ago can restart on the existing prescription if it still has repeats; otherwise a new consult is needed (P3.2). A correct draft explains both paths without assuming which applies."
+    },
+    {
+      "messageId": "MSG-P1-034",
+      "expectedCategory": "wants_human",
+      "expectedRoute": "person",
+      "mustHold": false,
+      "tricky": false,
+      "note": "Asks for a person today. A team member replies and offers a call back at a time he chooses; never an automated reply or a help article."
+    },
+    {
+      "messageId": "MSG-P1-035",
+      "expectedCategory": "script_renewal",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "The record does not show how many repeats are left, so a correct draft does not guess a number. It explains the reminder 21 days before the last repeat, and that a renewal can be done at a booked follow-up if it falls before the next billing date."
+    },
+    {
+      "messageId": "MSG-P1-036",
+      "expectedCategory": "adverse_event",
+      "expectedRoute": "urgent",
+      "mustHold": true,
+      "tricky": false,
+      "note": "A rash with lip and face swelling after starting a new bottle is a possible severe allergic reaction. Urgent: hold every undelivered order, no AI reply, the on-call clinician makes contact within 1 hour, and 000 comes first from P10.2."
+    },
+    {
+      "messageId": "MSG-P1-037",
+      "expectedCategory": "delivery_problem",
+      "expectedRoute": "draft",
+      "mustHold": false,
+      "tricky": false,
+      "note": "The ETA is today (22 Sep), so the order is not late yet. A correct draft shares the tracking and reassures in plain English; a trace opens at 2 business days past the ETA."
+    }
+  ]
+}
