@@ -417,10 +417,10 @@ function DecideActions({ result, onWriteAnother }: { result: PipelineResult; onW
   const safety = result.route === "clinician" || result.route === "urgent";
   const lead =
     result.route === "draft"
-      ? "On the desk, an agent reviews this draft and sends it. Nothing is sent from here."
+      ? "In real use, an agent reviews this draft on the desk and sends it. This is a test run: nothing is sent, and your message is not added to the desk."
       : safety
-        ? "On the desk, this goes to the clinician queue with the reason highlighted. Nothing is sent from here."
-        : "On the desk, an agent writes this reply. Nothing is sent from here.";
+        ? "In real use, this goes to the clinician queue with the reason highlighted. This is a test run: nothing is sent, and your message is not added to the queue."
+        : "In real use, an agent writes this reply on the desk. This is a test run: nothing is sent, and your message is not added to the desk.";
   return (
     <>
       <p className="basis-full text-sm text-ink">{lead}</p>
@@ -429,11 +429,11 @@ function DecideActions({ result, onWriteAnother }: { result: PipelineResult; onW
       </Button>
       {safety ? (
         <Button size="sm" variant="ghost" href="/clinician/" leadingIcon={Stethoscope}>
-          See the clinician queue
+          See the sample clinician queue
         </Button>
       ) : (
         <Button size="sm" variant="ghost" href="/desk/" trailingIcon={ArrowRight}>
-          See the desk
+          See the sample desk
         </Button>
       )}
     </>
